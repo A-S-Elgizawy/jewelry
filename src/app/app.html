@@ -2,4 +2,19 @@
   <li routerLink="/home">home</li>
   <li routerLink="/wishlist">wishlist</li>
 </ul>
+
+<header>
+  <div class="content">
+    <div class="head">
+      <div class="logo-img">
+        <img src="/ebadelrahman.PNG" alt="">
+      </div>
+      <div class="menu" (click)="openMenu()" [class.active]="IsOpened">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="body"></div>
+  </div>
+</header>
 <router-outlet />
