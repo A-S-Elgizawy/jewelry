@@ -1,0 +1,14 @@
+<h2>My Wishlist 🛒</h2>
+
+<div *ngFor="let product of wishlist" class="card">
+
+  <img [src]="product.image" alt="">
+
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.price }} EGP</p>
+
+  <button (click)="remove(product.id)">
+    ❌ Remove
+  </button>
+
+</div>

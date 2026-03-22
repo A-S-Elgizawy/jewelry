@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="card" *ngFor="let product of products">
+    
+    <img [src]="product.image" alt="">
+    
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.price }} EGP</p>
+
+    <button (click)="addToWishlist(product)">
+      ❤️ Add to Wishlist
+    </button>
+    <button [routerLink]="['/product', product.id]">
+       View Details
+    </button>
+
+  </div>
+</div>
