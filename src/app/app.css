@@ -45,22 +45,24 @@ header .head .menu{
     cursor: pointer;
 }
 header .head .menu span {
-    width: 23px;
+    width: 22px;
     height: 2.1px;
     background-color: white;
     transform-origin: center bottom;
     transition: .3s ease;
     border-radius: 1px;
     transform-origin: 50% 50% 0px;
+    position: relative;
 }
 header .head .menu span:nth-of-type(1){
     margin-bottom: 9px;
+    z-index: 10;
 }
 header .head .menu.active span:nth-of-type(1){
-    will-change: transform;
+    /* will-change: transform; */
     transform: translate(0px, 5px) rotate(46deg);
 }
 header .head .menu.active span:nth-of-type(2){
-    will-change: transform;
+    /* will-change: transform; */
     transform: translate(0px, -5px) rotate(-46deg);
 }
