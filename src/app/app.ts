@@ -32,6 +32,7 @@ toggleTheme() {
 
 // === scroll-up ===
   scrollPercent = 0;
+  isSticky = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -42,8 +43,8 @@ toggleTheme() {
     const totalScrollable = scrollHeight - clientHeight;
 
     this.scrollPercent = (scrollTop / totalScrollable) * 100;
-    console.log(this.scrollPercent);
-    
+  
+    this.isSticky = window.scrollY > 90;
   }
 
   scrollToTop() {

@@ -101,6 +101,8 @@ header .head .menu.active span:nth-of-type(2){
 }
 .items .wishlist svg{
     padding-top: 3px;
+    width: 28px;
+    height: 28px;
 }
 .items .wishlist .number{
     position: absolute;
@@ -146,14 +148,20 @@ header .head .menu.active span:nth-of-type(2){
     cursor: pointer;
     transition: .5s ease;
     z-index: 100;
+    position: relative;
+    top: -56px;
+    z-index: -1;
   }
+   .scroll-up.active{
+    top: 0px;
+   }
   .scroll-up .mini-circle{
     content: "";
     width: 36px;
     height: 36px;
     border-radius: 50%;
     background-color: var(--light-color);
-    border: 1px solid var(--dark-color);
+    border: 1px solid var(--white-color);
     z-index: 150;
     display: flex;
     justify-content: center;
