@@ -86,7 +86,11 @@ header.active .head .menu span:nth-of-type(2){
 header .body{
     width: 100%;
     background-color: var(--light-color);
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     height: 0;
     transition: .4s ease;
     overflow: hidden;
@@ -146,8 +150,8 @@ header .body ul li:nth-of-type(4){
 }
 .items .wishlist .number{
     position: absolute;
-    top: -4px;
-    right: -5px;
+    top: -6px;
+    right: -2px;
     width: 16px;
     height: 16px;
     background-color: var(--dark-color);
