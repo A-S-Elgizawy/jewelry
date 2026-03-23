@@ -6,13 +6,14 @@
 header{
     padding: .8rem;
     position: fixed;
-    top: -10rem;
+    top: -77px;
     left: 0;
     width: 100vw;
     transition: .5s ease;
 }
 header.fixed{
     top: 1rem;
+    transition: .5s ease;
 }
 header .content{
     display: flex;
@@ -159,7 +160,7 @@ header .body ul li:nth-of-type(4){
 .items .wishlist .number span{
     color: white;
     font-size: 11px;
-    padding-top: .2px;
+    padding-top: .1px;
 }
 
 /* === theme === */

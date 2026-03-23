@@ -52,7 +52,7 @@ toggleTheme() {
     if (currentScrollY > this.lastScrollY) {
       // Scroll Down 👇
       this.hideHeader = false;
-      this.IsOpened = false
+      // this.IsOpened = false
     } else {
       // Scroll Up 👆
       this.hideHeader = true;
