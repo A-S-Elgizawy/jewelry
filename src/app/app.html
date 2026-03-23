@@ -3,7 +3,7 @@
   <li routerLink="/wishlist">wishlist</li>
 </ul>
 
-<header [class.active]="IsOpened">
+<header [class.active]="IsOpened" [class.fixed]="hideHeader">
   <div class="content">
     <div class="head">
       <div class="menu" (click)="openMenu()">

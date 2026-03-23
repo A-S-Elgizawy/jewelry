@@ -5,6 +5,14 @@
 }
 header{
     padding: .8rem 1.5rem;
+    position: fixed;
+    top: -10rem;
+    left: 0;
+    width: 100vw;
+    transition: .4s ease;
+}
+header.fixed{
+    top: 1rem;
 }
 header .content{
     display: flex;
@@ -83,10 +91,10 @@ header .body{
     overflow: hidden;
 }
 header.active .body{
-    height: 288px;
+    height: 256px;
 }
 header .body ul {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +159,7 @@ header .body ul li:nth-of-type(4){
 .items .wishlist .number span{
     color: white;
     font-size: 11px;
-    padding-top: .8px;
+    padding-top: .4px;
 }
 
 /* === theme === */

@@ -33,7 +33,8 @@ toggleTheme() {
 // === scroll-up ===
   scrollPercent = 0;
   isSticky = false;
-
+  lastScrollY = 0;
+  hideHeader = true;
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = window.scrollY;
@@ -43,9 +44,24 @@ toggleTheme() {
     const totalScrollable = scrollHeight - clientHeight;
 
     this.scrollPercent = (scrollTop / totalScrollable) * 100;
-  
+  // ==sticky==
     this.isSticky = window.scrollY > 200;
+  // ==fixed==
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > this.lastScrollY) {
+      // Scroll Down 👇
+      this.hideHeader = false;
+      this.IsOpened = false
+    } else {
+      // Scroll Up 👆
+      this.hideHeader = true;
+      
+    }
+
+    this.lastScrollY = currentScrollY;
   }
+  
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
