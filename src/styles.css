@@ -8,8 +8,10 @@
   list-style: none;
 }
 :root{
-    --dark-color: #004080;
-    --light-color: #0080ff;
+    --dark-color: #0B2D72;
+    --light-color: #0992C2;
+    /* --dark-color: #004080;
+    --light-color: #0080ff; */
     --white-color:white;
     --black-color:black;
 }
@@ -23,6 +25,7 @@ body {
 
 /* الوضع الداكن */
 body.dark-mode {
-  background-color: var(--dark-color);
+  /* background-color: var(--dark-color); */
+  background-color: rgb(24, 24, 24);
   /* color: white; */
 }
