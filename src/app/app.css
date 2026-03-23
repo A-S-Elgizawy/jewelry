@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 header{
-    padding: .8rem 1.5rem;
+    padding: .8rem;
     position: fixed;
     top: -10rem;
     left: 0;
     width: 100vw;
-    transition: .4s ease;
+    transition: .5s ease;
 }
 header.fixed{
     top: 1rem;
@@ -85,7 +85,7 @@ header.active .head .menu span:nth-of-type(2){
 header .body{
     width: 100%;
     background-color: var(--light-color);
-    border-radius: 40px;
+    border-radius: 30px;
     height: 0;
     transition: .4s ease;
     overflow: hidden;
@@ -121,7 +121,7 @@ header .body ul li:nth-of-type(4){
     align-items: center;
     gap: 1rem;
     position: fixed;
-    left: 1.5rem;
+    left: .8rem;
     bottom: 60px;
 }
 /* === wishlist === */
@@ -159,7 +159,7 @@ header .body ul li:nth-of-type(4){
 .items .wishlist .number span{
     color: white;
     font-size: 11px;
-    padding-top: .4px;
+    padding-top: .2px;
 }
 
 /* === theme === */
