@@ -160,7 +160,7 @@ header .body ul li:nth-of-type(4){
 .items .wishlist .number span{
     color: white;
     font-size: 11px;
-    padding-top: .1px;
+    /* padding-top: .1px; */
 }
 
 /* === theme === */
