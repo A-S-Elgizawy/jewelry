@@ -3,10 +3,10 @@
   <li routerLink="/wishlist">wishlist</li>
 </ul>
 
-<header>
+<header [class.active]="IsOpened">
   <div class="content">
     <div class="head">
-      <div class="menu" (click)="openMenu()" [class.active]="IsOpened">
+      <div class="menu" (click)="openMenu()">
         <span></span>
         <span></span>
         <!-- <i class="fa-solid fa-x"></i> -->
@@ -15,7 +15,14 @@
         <img src="/ebadelrahman.PNG" alt="">
       </div>
     </div>
-    <div class="body"></div>
+    <div class="body">
+      <ul>
+        <li>الرئيسية</li>
+        <li>معلومات عنا</li>
+        <li>تسوق</li>
+        <li>تواصل معنا</li>
+      </ul>
+    </div>
   </div>
 </header>
 <div class="items">

@@ -44,7 +44,7 @@ toggleTheme() {
 
     this.scrollPercent = (scrollTop / totalScrollable) * 100;
   
-    this.isSticky = window.scrollY > 90;
+    this.isSticky = window.scrollY > 200;
   }
 
   scrollToTop() {

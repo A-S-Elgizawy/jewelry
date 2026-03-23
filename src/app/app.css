@@ -9,7 +9,7 @@ header{
 header .content{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
 }
 header .head{
@@ -45,7 +45,6 @@ header .head .menu{
     cursor: pointer;
     position: relative;
 }
-/* ===== */
 header .head .menu i{
     position: absolute;
     top: 50%;
@@ -68,12 +67,44 @@ header .head .menu span:nth-of-type(1){
     margin-bottom: 9px;
     z-index: 10;
 }
-header .head .menu.active span:nth-of-type(1){
+header.active .head .menu span:nth-of-type(1){
     transform: translate(0px, 5.6px) rotate(49.5deg);
 }
-header .head .menu.active span:nth-of-type(2){
+header.active .head .menu span:nth-of-type(2){
     transform: translate(0px, -5.3px) rotate(-50deg);
 }
+/* == */
+header .body{
+    width: 100%;
+    background-color: var(--light-color);
+    border-radius: 40px;
+    height: 0;
+    transition: .4s ease;
+    overflow: hidden;
+}
+header.active .body{
+    height: 288px;
+}
+header .body ul {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+header .body ul li{
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+header .body ul li:nth-of-type(4){
+    padding: 1rem;
+    background-color: var(--dark-color);
+    border-radius: 40px;
+}
+/* ===== */
 /* ====== items ====== */
 .items {
     display: flex;
@@ -97,7 +128,7 @@ header .head .menu.active span:nth-of-type(2){
     position: relative;
     cursor: pointer;
     border: 1px solid var(--dark-color);
-    color: var(--dark-color);
+    color: white;
 }
 .items .wishlist svg{
     padding-top: 3px;
@@ -120,6 +151,7 @@ header .head .menu.active span:nth-of-type(2){
 .items .wishlist .number span{
     color: white;
     font-size: 11px;
+    padding-top: .8px;
 }
 
 /* === theme === */
@@ -131,7 +163,7 @@ header .head .menu.active span:nth-of-type(2){
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  color: var(--dark-color);
+  color: white;
   background-color: var(--light-color);
   border: 1px solid var(--dark-color);
  }
@@ -143,7 +175,7 @@ header .head .menu.active span:nth-of-type(2){
     display: flex;
     justify-content: center;
     align-items: center;
-    background: conic-gradient(red var(--progress), white  0);
+    background: conic-gradient(var(--dark-color) var(--progress), white  0);
     color: var(--dark-color);
     cursor: pointer;
     transition: .5s ease;
@@ -151,6 +183,7 @@ header .head .menu.active span:nth-of-type(2){
     position: relative;
     top: -56px;
     z-index: -1;
+    color: white;
   }
    .scroll-up.active{
     top: 0px;
