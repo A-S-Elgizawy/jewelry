@@ -2,7 +2,21 @@
 
 
 :root{
-    --main-color: red;
+    --dark-color: red;
+    --light-color: rgb(255, 135, 135);
     --white-color:white;
     --black-color:black;
+}
+
+/* الوضع العادي */
+body {
+  background-color: var(--white-color);
+  /* color: black; */
+  /* transition: 0.3s; */
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+  background-color: var(--dark-color);
+  /* color: white; */
 }

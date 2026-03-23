@@ -6,16 +6,56 @@
 <header>
   <div class="content">
     <div class="head">
-      <div class="logo-img">
-        <img src="/ebadelrahman.PNG" alt="">
-      </div>
       <div class="menu" (click)="openMenu()" [class.active]="IsOpened">
         <span></span>
         <span></span>
         <!-- <i class="fa-solid fa-x"></i> -->
       </div>
+      <div class="logo-img">
+        <img src="/ebadelrahman.PNG" alt="">
+      </div>
     </div>
     <div class="body"></div>
   </div>
 </header>
+<div class="items">
+  <div class="wishlist">
+     <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+      fill="currentColor" viewBox="0 0 24 24" >
+      <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+      </svg>
+    <div class="number">
+      <span>8</span>
+    </div>
+  </div>
+   <div class="theme" (click)="toggleTheme()">
+          <!-- Sun -->
+          <svg *ngIf="isDark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24">
+            <path d="M12 17.01c2.76 0 5.01-2.25 5.01-5.01S14.76 6.99 12 6.99 6.99 9.24 6.99 12s2.25 5.01 5.01 5.01M12 9c1.66 0 3.01 1.35 3.01 3.01s-1.35 3.01-3.01 3.01-3.01-1.35-3.01-3.01S10.34 9 12 9m1 10h-2v3h2zm0-17h-2v3h2zM2 11h3v2H2zm17 0h3v2h-3zM4.22 18.36l.71.71.71.71 1.06-1.06 1.06-1.06-.71-.71-.71-.71-1.06 1.06zM19.78 5.64l-.71-.71-.71-.71-1.06 1.06-1.06 1.06.71.71.71.71 1.06-1.06zm-12.02.7L6.7 5.28 5.64 4.22l-.71.71-.71.71L5.28 6.7l1.06 1.06.71-.71zm8.48 11.32 1.06 1.06 1.06 1.06.71-.71.71-.71-1.06-1.06-1.06-1.06-.71.71z"></path>
+          </svg>
+
+          <!-- Moon -->
+          <svg *ngIf="!isDark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24">
+            <path d="M20.71 13.51c-.78.23-1.58.35-2.38.35-4.52 0-8.2-3.68-8.2-8.2 0-.8.12-1.6.35-2.38.11-.35.01-.74-.25-1s-.64-.36-1-.25A10.17 10.17 0 0 0 2 11.8C2 17.42 6.57 22 12.2 22c4.53 0 8.45-2.91 9.76-7.24.11-.35.01-.74-.25-1s-.64-.36-1-.25M12.2 20C7.68 20 4 16.32 4 11.8a8.15 8.15 0 0 1 4.18-7.15c-.03.34-.05.68-.05 1.02 0 5.62 4.57 10.2 10.2 10.2.34 0 .68-.02 1.02-.05C17.93 18.38 15.23 20 12.2 20M16 8l.94-2.06L19 5l-2.06-.94L16 2l-.94 2.06L13 5l2.06.94zm4.25-.5-.55 1.2-1.2.55 1.2.55.55 1.2.55-1.2 1.2-.55-1.2-.55z"></path>
+          </svg>
+  </div>
+  <div class="scroll-up" [style.--progress]="scrollPercent + '%'" (click)="scrollToTop()">
+    <div class="mini-circle">
+      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+      fill="currentColor" viewBox="0 0 24 24" >
+      <path d="M13 18V9.91l3.29 3.3 1.42-1.42L12 6.09l-5.71 5.7 1.42 1.42L11 9.91V18z"></path>
+      </svg>
+    </div>
+</div>
+</div>
 <router-outlet />

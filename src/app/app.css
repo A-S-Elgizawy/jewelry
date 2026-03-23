@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 header{
-    padding: .8rem;
+    padding: .8rem 1.5rem;
 }
 header .content{
     display: flex;
@@ -13,8 +13,8 @@ header .content{
     align-items: center;
 }
 header .head{
-    width: 100%;
-   background-color: rgba(255, 0, 0, 0.267);
+   width: 100%;
+   background-color: var(--light-color);
    border-radius: 40px;
    padding: .6rem; 
    display: flex;
@@ -41,7 +41,7 @@ header .head .menu{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
+    background-color: var(--dark-color);
     cursor: pointer;
     position: relative;
 }
@@ -55,7 +55,7 @@ header .head .menu i{
 }
 /* ===== */
 header .head .menu span {
-    width: 21px;
+    width: 18px;
     height: 2.1px;
     background-color: white;
     transform-origin: center bottom;
@@ -69,12 +69,97 @@ header .head .menu span:nth-of-type(1){
     z-index: 10;
 }
 header .head .menu.active span:nth-of-type(1){
-    /* will-change: transform; */
-    /* transform: translate(0px, 5px) rotate(49deg); */
-        transform: translate(0px, 5.6px) rotate(49.5deg);
+    transform: translate(0px, 5.6px) rotate(49.5deg);
 }
 header .head .menu.active span:nth-of-type(2){
-    /* will-change: transform; */
-    /* transform: translate(0px, -5px) rotate(-51deg); */
     transform: translate(0px, -5.3px) rotate(-50deg);
 }
+/* ====== items ====== */
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    left: 1.5rem;
+    bottom: 60px;
+}
+/* === wishlist === */
+.items .wishlist{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
+}
+.items .wishlist svg{
+    padding-top: 3px;
+}
+.items .wishlist .number{
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: .1px solid var(--white-color);
+}
+.items .wishlist .number span{
+    color: white;
+    font-size: 11px;
+}
+
+/* === theme === */
+.items .theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: 1px solid var(--dark-color);
+ }
+ /* === scroll-scroll-up === */
+ .scroll-up{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(red var(--progress), white  0);
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: .5s ease;
+    z-index: 100;
+  }
+  .scroll-up .mini-circle{
+    content: "";
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    border: 1px solid var(--dark-color);
+    z-index: 150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .scroll-up svg{
+    width: 30px;
+    height: 30px; 
+ }
