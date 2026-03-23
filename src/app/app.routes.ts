@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { Wishlist } from './wishlist/wishlist';
 import { Details } from './details/details';
+import { Contact } from './contact/contact';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,10 @@ export const routes: Routes = [
     {
         path:'wishlist',
         component:Wishlist
+    },
+    {
+        path:'contact',
+        component:Contact
     },
     {
         path: 'product/:id',

@@ -6,9 +6,9 @@
 header{
     padding: .8rem;
     position: fixed;
-    top: -77px;
+    top: -75px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     transition: .3s ease;
 }
 header.fixed{
