@@ -33,7 +33,7 @@ header .head{
    background-color: var(--purple-color);
    /* border-radius: 40px; */
    /* padding: 6px 20px 6px .8rem; */
-   padding: 6px .8rem 6px .8rem;
+   padding: 9px .8rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -249,4 +249,19 @@ header .body ul li:nth-of-type(4){
  .scroll-up svg{
     width: 30px;
     height: 30px; 
+ }
+ /* === footer === */
+ footer p{
+    background-color: var(--purple-color);
+    color: white;
+    text-align: center;
+    /* padding: 7px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+ }
+ footer span{
+    padding-right: 5px;
+    font-size: 20px;
  }
