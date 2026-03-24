@@ -11,6 +11,7 @@ header{
     left: 0;
     width: 100%;
     transition: .3s ease;
+    z-index: 100;
 }
 header.fixed{
     top: 0rem;
@@ -69,7 +70,7 @@ header .head .menu i{
 /* ===== */
 header .head .menu span {
     width: 18px;
-    height: 2.1px;
+    height: 2px;
     background-color: var(--purple-color);
     transform-origin: center bottom;
     transition: .3s ease;
@@ -157,6 +158,10 @@ header .body ul li:nth-of-type(4){
     background-color: var(--purple-color);
     color: white;
 }
+.items .wishlist.active{
+    background-color: var(--purple-color);
+    color: white;
+}
 .items .wishlist svg{
     padding-top: 3px;
     width: 28px;
@@ -195,6 +200,10 @@ header .body ul li:nth-of-type(4){
   transition: .3s ease;
  }
  .items .theme:hover{
+    background-color: var(--purple-color);
+    color: white;
+ }
+ .items .theme.active{
     background-color: var(--purple-color);
     color: white;
  }

@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, signal } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink,CommonModule],
+  imports: [RouterOutlet,RouterLink,CommonModule,RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+
   // === menu ===
   IsOpened = false
   hiddin = false
   state = false
-  openMenu(){
+  Menu(){
     this.state = !this.state
     if(this.state  == true){
       this.hiddin = !this.hiddin
