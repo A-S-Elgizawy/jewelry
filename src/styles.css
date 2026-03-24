@@ -15,7 +15,11 @@
     --purple-color:#754ef9;
     --white-color:white;
     --black-color:black;
-    --box-shadow: 0  0  5px  5px rgba(0,0,0,0.1)
+    --purple-shadow: 0 0 1px 1px #764ef9b2;
+    --gray-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    --medium-size: 13px;
+    --medium-size-14: 14px;
+    --larg-size: 28px;
 }
 
 /* الوضع العادي */
