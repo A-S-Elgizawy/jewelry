@@ -24,4 +24,10 @@ export class Contact {
       `https://www.google.com/maps?q=${this.location.lat},${this.location.lng}&output=embed`
     );
   }
+
+  // =====
+  Isopened = false
+  openMap(){
+   this.Isopened = !this.Isopened
+  }
 }

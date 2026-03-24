@@ -11,8 +11,22 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class App {
   // === menu ===
   IsOpened = false
+  hiddin = false
+  state = false
   openMenu(){
-    this.IsOpened = !this.IsOpened
+    this.state = !this.state
+    if(this.state  == true){
+      this.hiddin = !this.hiddin
+    setTimeout(()=>{
+      this.IsOpened = !this.IsOpened
+    },0)
+    }else{
+      this.IsOpened = !this.IsOpened
+      setTimeout(()=>{
+      this.hiddin = false
+      },300)
+    }
+
   }
 
 

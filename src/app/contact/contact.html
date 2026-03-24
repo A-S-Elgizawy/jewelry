@@ -50,8 +50,8 @@
                     <p class="details">كفر الزيات / شارع عتريس / منطقة الساغة</p>
                 </div>
             </div>
-            <div class="location">
-                <div class="item">
+            <div class="location" [class.active]="Isopened">
+                <div class="item ">
                     <div class="icon">
                         <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
                         fill="currentColor" viewBox="0 0 24 24" >                
@@ -60,13 +60,19 @@
                     </div>
                     <div class="info">
                         <p class="title">الموقع</p>
+                        <div class="icon" (click)="openMap()">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                            fill="currentColor" viewBox="0 0 24 24" >
+                            <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z"></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="map">
                     <iframe
                     width="100%"
                     height="400"
-                    style="border:0; border-radius:40px;"
+                    style="border:0;"
                     loading="lazy"
                     [src]="mapUrl">
                     </iframe>

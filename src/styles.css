@@ -10,8 +10,9 @@
 :root{
     --dark-color: #0B2D72;
     --light-color: #0992C2;
-    /* --dark-color: #004080;
-    --light-color: #0080ff; */
+    /* --dark-color: #754ef9;
+    --light-color: #00abf0; */
+    --purple-color:#754ef9;
     --white-color:white;
     --black-color:black;
     --box-shadow: 0  0  5px  5px rgba(0,0,0,0.1)
