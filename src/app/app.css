@@ -130,72 +130,7 @@ header .body ul li:nth-of-type(4){
     border-radius: 40px;
     text-align: center;
 }
-header .body ul span{
-    position: absolute;
-}
-header .body ul .one{
-    width: 50px;
-    height: 50px;
-    top: 0;
-    left: 50px;
-    background-color: var(--purple-color);
-}
-header .body ul .two{
-    width: 50px;
-    height: 50px;
-    top: 50px;
-    left: 0px;
-    background-color: var(--purple-color);
-}
-header .body ul .three{
-    width: 50px;
-    height: 50px;
-    top: 50px;
-    left: 100px;
-    background-color: var(--purple-color);
-}
-header .body ul .four{
-    width: 50px;
-    height: 50px;
-    top: 100px;
-    left: 50px;
-    background-color: var(--purple-color);
-}
-header .body ul .five{
-    width: 50px;
-    height: 50px;
-    top: 0px;
-    left: 150px;
-    background-color: var(--purple-color);
-}
-header .body ul .six{
-    width: 50px;
-    height: 50px;
-    top: 50px;
-    left: 200px;
-    background-color: var(--purple-color);
-}
-header .body ul .seven{
-    width: 50px;
-    height: 50px;
-    top: 100px;
-    left: 150px;
-    background-color: var(--purple-color);
-}
-header .body ul .eight{
-    width: 50px;
-    height: 50px;
-    top: 150px;
-    left: 100px;
-    background-color: var(--purple-color);
-}
-header .body ul .nine{
-    width: 50px;
-    height: 50px;
-    top: 150px;
-    left: 0px;
-    background-color: var(--purple-color);
-}
+
 /* ===== */
 /* ====== items ====== */
 .items {
@@ -331,8 +266,7 @@ footer {
     font-size: 13px;
  }
  footer span{
-    /* padding-right: 5px; */
-    padding-top: 2.5px;
+    padding-top: 3px;
     font-size: 20px;
     color: white;
     display: flex;
