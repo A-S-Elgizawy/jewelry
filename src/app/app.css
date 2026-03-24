@@ -138,6 +138,7 @@ header .body ul li:nth-of-type(4){
     position: fixed;
     left: .8rem;
     bottom: 60px;
+    z-index: 100;
 }
 /* === wishlist === */
 .items .wishlist{
