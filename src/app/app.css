@@ -22,7 +22,6 @@ header{
 header .content{
     display: flex;
     flex-direction: column;
-    gap: .8rem;
     align-items: center;
     z-index: 100;
     position: relative;
@@ -31,8 +30,6 @@ header .head{
    width: 100%;
    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
    background-color: var(--purple-color);
-   /* border-radius: 40px; */
-   /* padding: 6px 20px 6px .8rem; */
    padding: 9px .8rem;
    display: flex;
    justify-content: space-between;
@@ -40,8 +37,6 @@ header .head{
 
 }
 header .head .logo-img{
-    /* width: 50px;
-    height: 45px; */
     width: 58px;
     height: 48px;
     border-radius: 5px;
@@ -96,13 +91,13 @@ header.active .head .menu span:nth-of-type(2){
 /* == */
 header .body{
     width: 100%;
-    background-color: var(--purple-color);
-    border-radius: 10px;
+    background-color: var(--white-color);
     transform: translateY(1rem);
     opacity: 0;
     transition: .3s ease;
     overflow: hidden;
     display: none;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 header.showfirst .body{
     display: block;
@@ -117,20 +112,89 @@ header .body ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 1rem; */
+    position: relative;
 }
 header .body ul li{
-    color: var(--black-color);
+    color: var(--purple-color);
     cursor: pointer;
     width: 100%;
     text-align: right;
     padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 600;
 }
 header .body ul li:nth-of-type(4){
     margin-top: 10px;
-    background-color: var(--light-color);
+    background-color: var(--purple-color);
+    color: white;
     border-radius: 40px;
     text-align: center;
+}
+header .body ul span{
+    position: absolute;
+}
+header .body ul .one{
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 50px;
+    background-color: var(--purple-color);
+}
+header .body ul .two{
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 0px;
+    background-color: var(--purple-color);
+}
+header .body ul .three{
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 100px;
+    background-color: var(--purple-color);
+}
+header .body ul .four{
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: 50px;
+    background-color: var(--purple-color);
+}
+header .body ul .five{
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 150px;
+    background-color: var(--purple-color);
+}
+header .body ul .six{
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 200px;
+    background-color: var(--purple-color);
+}
+header .body ul .seven{
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: 150px;
+    background-color: var(--purple-color);
+}
+header .body ul .eight{
+    width: 50px;
+    height: 50px;
+    top: 150px;
+    left: 100px;
+    background-color: var(--purple-color);
+}
+header .body ul .nine{
+    width: 50px;
+    height: 50px;
+    top: 150px;
+    left: 0px;
+    background-color: var(--purple-color);
 }
 /* ===== */
 /* ====== items ====== */
@@ -139,10 +203,10 @@ header .body ul li:nth-of-type(4){
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: .7rem;
     position: fixed;
     left: .8rem;
-    bottom: 60px;
+    bottom: 55px;
     z-index: 100;
 }
 /* === wishlist === */
@@ -227,7 +291,7 @@ header .body ul li:nth-of-type(4){
     transition: .5s ease;
     z-index: 100;
     position: relative;
-    top: -56px;
+    top: -51px;
     z-index: -1;
     color: white;
   }
@@ -251,17 +315,26 @@ header .body ul li:nth-of-type(4){
     height: 30px; 
  }
  /* === footer === */
- footer p{
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--purple-color);
+}
+ footer p{
     color: white;
     text-align: center;
-    /* padding: 7px; */
+    padding: .5rem 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 13px;
  }
  footer span{
-    padding-right: 5px;
+    /* padding-right: 5px; */
+    padding-top: 2.5px;
     font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
  }
