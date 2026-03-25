@@ -158,7 +158,7 @@
     z-index: -1;
 }
 .contact .content .items .location .map iframe{
-    padding: .3rem .3rem .2rem 4px;
+    padding: .3rem 5px .2rem 4px;
 }
 .contact .content .items .location.active .map{
     height: 300px;
@@ -191,6 +191,7 @@
   font-size: var(--medium-size);
   outline: none;
   background-color: transparent;
+  color: var(--black-color);
 }
 
 textarea {
