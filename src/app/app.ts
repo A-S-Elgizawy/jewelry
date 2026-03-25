@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { WishlistService } from './service/wishlist-service';
 
 @Component({
   selector: 'app-root',
@@ -34,16 +35,18 @@ export class App {
 
 // === theme ===
 isDark = false;
+currentTheme: 'light' | 'dark' = 'light';
 
-toggleTheme() {
-  this.isDark = !this.isDark;
-
-  if (this.isDark) {
-    document.body.classList.add('dark-mode');
-  } else {
-    document.body.classList.remove('dark-mode');
+  constructor(public themeService: WishlistService) {
+    this.themeService.theme$.subscribe(theme => {
+      this.currentTheme = theme;
+    });
   }
-}
+
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.toggleTheme();
+  }
 
 // === scroll-up ===
   scrollPercent = 0;

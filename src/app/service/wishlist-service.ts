@@ -1,26 +1,10 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WishlistService {
-  //   wishlist: any[] = [];
-
-  // addToWishlist(product: any) {
-  //   const exists = this.wishlist.find(p => p.id === product.id);
-
-  //   if (!exists) {
-  //     this.wishlist.push(product);
-  //   }
-  // }
-
-  // getWishlist() {
-  //   return this.wishlist;
-  // }
-
-  // removeFromWishlist(id: number) {
-  //   this.wishlist = this.wishlist.filter(p => p.id !== id);
-  // }
 
   // ====== local storage =====
     wishlist: any[] = [];
@@ -31,6 +15,12 @@ export class WishlistService {
 
     if (data) {
       this.wishlist = JSON.parse(data);
+    }
+
+    // ==== theme ===
+    const saved = localStorage.getItem('theme') as 'light' | 'dark';
+    if (saved) {
+      this.theme.next(saved);
     }
   }
 
@@ -55,5 +45,16 @@ export class WishlistService {
   // حفظ البيانات
   private saveToLocalStorage() {
     localStorage.setItem('wishlist', JSON.stringify(this.wishlist));
+  }
+
+
+  // ====== theme ======
+  private theme = new BehaviorSubject<'light' | 'dark'>('light');
+  theme$ = this.theme.asObservable();
+
+  toggleTheme() {
+    const current = this.theme.value === 'light' ? 'dark' : 'light';
+    this.theme.next(current);
+    localStorage.setItem('theme', current);
   }
 }

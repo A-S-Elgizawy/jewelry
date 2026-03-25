@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.contact{
+    background-color: var(--white-color);
+}
 .contact .content{
     padding: 75px .8rem .8rem;
     margin-top: 25px;
@@ -33,18 +36,22 @@
 .contact .content .identifier p{
     padding: 3px 8px;
     font-size: var(--medium-size);
+    color: var(--black-color);
 }
 .contact .content .heading {
     margin: 1.5rem;
     text-align: center;
+    
 }
 .contact .content .heading h2{
     font-weight: 700;
     font-size: var(--larg-size);
     margin-bottom: 1rem;
+    color: var(--black-color);
 }
 .contact .content .heading p{
     font-size: var(--medium-size);
+    color: var(--black-color);
 }
 
 /* == items == */
@@ -64,7 +71,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--purple-color);
-    color: var(--white-color);
+    color: white;
     border-radius: 40px;
 }
 .contact .content .items .item .info p{
@@ -115,7 +122,8 @@
     color: white;
 }
 .contact .content .items .location.active .item .icon {
-    background-color: white;
+    /* background-color: white; */
+    background-color: var(--white-color);
 }
 .contact .content .items .location.active .item .icon svg{
     color: var(--purple-color);
@@ -127,14 +135,13 @@
     transition: .3s ease;
     overflow: hidden;
     position: relative;
+    z-index: 3;
 }
 .contact .content .items .location .map::before{
     content: " ";
     position: absolute;
     width: 50px;
     height: 100px;
-    /* top: 50%;
-    transform: translateY(-50%); */
     bottom: 0;
     right: 0;
     background-color: var(--purple-color);
@@ -145,8 +152,6 @@
     position: absolute;
     width: 50px;
     height: 100px;
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
     bottom: 0;
     left: 0;
     background-color: var(--purple-color);
@@ -166,6 +171,7 @@
 .message h3{
     text-align: center;
     font-size: 21px;
+    color: var(--black-color);
 }
 .message form{
     width: 100%;
@@ -210,6 +216,7 @@ textarea {
   padding-right: .8rem;
   font-size: var(--medium-size-14);
   font-weight: 500;
+  color: var(--black-color);
 }
 .message form button{
     padding: .5rem;

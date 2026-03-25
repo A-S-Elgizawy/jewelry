@@ -14,19 +14,23 @@
     --light-color: #00abf0; */
     --purple-color:#754ef9;
     --white-color:white;
-    --black-color:black;
+    --black-color:#333;
     --purple-shadow: 0 0 1px 1px #764ef9b2;
     --gray-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
     --medium-size: 13px;
     --medium-size-14: 14px;
     --larg-size: 28px;
 }
-
+.dark{
+    --purple-color:#754ef9;
+    --white-color:#333;
+    --black-color:white;
+    --gray-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
+}
 /* الوضع العادي */
 body {
   background-color: var(--white-color);
-  /* color: black; */
-  /* transition: 0.3s; */
+  color: black;
 }
 
 /* الوضع الداكن */

@@ -220,7 +220,7 @@ header .body ul li:nth-of-type(4){
     display: flex;
     justify-content: center;
     align-items: center;
-    background: conic-gradient(var(--purple-color) var(--progress), white  0);
+    background: conic-gradient(var(--purple-color) var(--progress), var(--white-color)  0);
     color: white;
     cursor: pointer;
     transition: .5s ease;
