@@ -10,7 +10,10 @@ import { WishlistService } from './service/wishlist-service';
   styleUrl: './app.css'
 })
 export class App {
-
+  ToolsActive = false
+  OpenTools (){
+    this.ToolsActive = !this.ToolsActive
+  }
   // === menu ===
   IsOpened = false
   hiddin = false
@@ -36,7 +39,6 @@ export class App {
 // === theme ===
 isDark = false;
 currentTheme: 'light' | 'dark' = 'light';
-
   constructor(public themeService: WishlistService) {
     this.themeService.theme$.subscribe(theme => {
       this.currentTheme = theme;
@@ -84,4 +86,126 @@ currentTheme: 'light' | 'dark' = 'light';
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+
+
+  // ========== calculator ===========
+  input: string = '';
+  resultDisplayed: boolean = false;
+
+  pressNumber(value: string) {
+    const lastChar = this.input[this.input.length - 1];
+
+    if (!this.resultDisplayed) {
+      this.input += value;
+    } else if (
+      this.resultDisplayed &&
+      (lastChar === '+' ||
+        lastChar === '-' ||
+        lastChar === '×' ||
+        lastChar === '÷')
+    ) {
+      this.resultDisplayed = false;
+      this.input += value;
+    } else {
+      this.resultDisplayed = false;
+      this.input = value;
+    }
+  }
+
+  pressOperator(op: string) {
+    const lastChar = this.input[this.input.length - 1];
+
+    if (
+      lastChar === '+' ||
+      lastChar === '-' ||
+      lastChar === '×' ||
+      lastChar === '÷'
+    ) {
+      this.input = this.input.slice(0, -1) + op;
+    } else if (this.input.length === 0) {
+      return;
+    } else {
+      this.input += op;
+    }
+  }
+
+  calculate() {
+    let inputString = this.input;
+
+    let numbers = inputString.split(/\+|\-|\×|\÷/g);
+    let operators = inputString.replace(/[0-9]|\./g, '').split('');
+
+    let divide = operators.indexOf('÷');
+    while (divide !== -1) {
+      numbers.splice(
+        divide,
+        2,
+        (Number(numbers[divide]) / Number(numbers[divide + 1])).toString()
+      );
+      operators.splice(divide, 1);
+      divide = operators.indexOf('÷');
+    }
+
+    let multiply = operators.indexOf('×');
+    while (multiply !== -1) {
+      numbers.splice(
+        multiply,
+        2,
+        (Number(numbers[multiply]) * Number(numbers[multiply + 1])).toString()
+      );
+      operators.splice(multiply, 1);
+      multiply = operators.indexOf('×');
+    }
+
+    let subtract = operators.indexOf('-');
+    while (subtract !== -1) {
+      numbers.splice(
+        subtract,
+        2,
+        (Number(numbers[subtract]) - Number(numbers[subtract + 1])).toString()
+      );
+      operators.splice(subtract, 1);
+      subtract = operators.indexOf('-');
+    }
+
+    let add = operators.indexOf('+');
+    while (add !== -1) {
+      numbers.splice(
+        add,
+        2,
+        (Number(numbers[add]) + Number(numbers[add + 1])).toString()
+      );
+      operators.splice(add, 1);
+      add = operators.indexOf('+');
+    }
+
+    this.input = numbers[0];
+    this.resultDisplayed = true;
+  }
+
+  clearInput() {
+    this.input = '';
+    this.resultDisplayed = false;
+  }
+
+  CalcActive = false
+  OpenCalc(){
+  this.CalcActive = !this.CalcActive
+  }
+
+
+
+  // ======= change main photo ========
+
 }
+
+
+
+
+
+
+
+
+
+

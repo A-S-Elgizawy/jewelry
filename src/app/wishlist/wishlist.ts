@@ -21,4 +21,11 @@ export class Wishlist {
     this.wishlistService.removeFromWishlist(id);
     this.wishlist = this.wishlistService.getWishlist();
   }
+
+
+  // ==========
+
+
+
+
 }

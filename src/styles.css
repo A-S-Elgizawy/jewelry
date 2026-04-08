@@ -8,34 +8,57 @@
   list-style: none;
 }
 :root{
-    --dark-color: #0B2D72;
-    --light-color: #0992C2;
-    /* --dark-color: #754ef9;
-    --light-color: #00abf0; */
-    --purple-color:#754ef9;
+    --purple-color:#754ef9; 
     --white-color:white;
     --black-color:#333;
     --purple-shadow: 0 0 1px 1px #764ef9b2;
     --gray-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
-    --medium-size: 13px;
-    --medium-size-14: 14px;
-    --larg-size: 28px;
+    --purple-border: .5px solid #754ef9;
+    --medium-size: clamp(13px,2vw,16px);
+    --medium-size-14: clamp(14px,2vw,16px);
+    --larg-size: clamp(24px,4vw,28px);
+    --small-heading:clamp(21px,4vw,25px) ;
+    --main-background: #f5f5f5;
+    --background-img-color:#e7e7e7;
 }
 .dark{
-    --purple-color:#754ef9;
     --white-color:#333;
     --black-color:white;
+    --purple-backgroung: #333;
     --gray-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-/* الوضع العادي */
-body {
-  background-color: var(--white-color);
-  color: black;
+    --main-background: #393939;
+    --background-img-color:#2f2f2f;
 }
 
-/* الوضع الداكن */
-body.dark-mode {
-  /* background-color: var(--dark-color); */
-  background-color: rgb(24, 24, 24);
-  /* color: white; */
+/* == pagination == */
+/* الحجم الافتراضي لكل النقاط */
+.swiper-pagination-bullet {
+  height: 6px;
+  width: 6px;
+  transition: all 0.3s; 
+  background-color: #00000057; 
+}
+/* النقطة النشطة */
+.swiper-pagination-bullet-active {
+  width: 9px;     
+  height: 9px;
+  background-color: white; 
+}
+
+/* ====== chart ======= */
+.tv-widget-chart__container-wrappper {
+  background-color: var(--purple-color) !important;
+}
+/* ===== filter ====== */
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  border: none !important;
+  background-color: var(--white-color);
+  transition: .2 ease;
+  color: var(--black-color);
+}
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  box-shadow: none !important;
+}
+.ant-select-arrow .anticon > svg{
+  color: var(--purple-color);
 }

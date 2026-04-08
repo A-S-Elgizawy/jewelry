@@ -49,7 +49,19 @@ export class WishlistService {
 
 
   // ====== theme ======
-  private theme = new BehaviorSubject<'light' | 'dark'>('light');
+  // private theme = new BehaviorSubject<'light' | 'dark'>('light');
+  // theme$ = this.theme.asObservable();
+
+  // toggleTheme() {
+  //   const current = this.theme.value === 'light' ? 'dark' : 'light';
+  //   this.theme.next(current);
+  //   localStorage.setItem('theme', current);
+  // }
+
+  private theme = new BehaviorSubject<'light' | 'dark'>(
+    (localStorage.getItem('theme') as 'light' | 'dark') || 'light'
+  );
+
   theme$ = this.theme.asObservable();
 
   toggleTheme() {
@@ -57,4 +69,9 @@ export class WishlistService {
     this.theme.next(current);
     localStorage.setItem('theme', current);
   }
+
+  get currentTheme() {
+    return this.theme.value;
+  }
+
 }

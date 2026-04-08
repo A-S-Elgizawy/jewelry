@@ -1,0 +1,388 @@
+<div class="shop">
+    <div class="content">
+
+        <div class="identifier"  >
+            <div class="phone">
+                <p>تسوق الأن</p>
+                <div class="icon">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <path d="M21 4H6.17l-.18-1.15A1 1 0 0 0 5 2H2v2h2.14l1.87 12.15A1 1 0 0 0 7 17h12v-2H7.86l-.31-2H19c.45 0 .84-.3.96-.73l2-7A1 1 0 0 0 21 3.99Zm-2.75 7H7.24l-.77-5h13.2l-1.43 5ZM8 18a2 2 0 1 0 0 4 2 2 0 1 0 0-4m9 0a2 2 0 1 0 0 4 2 2 0 1 0 0-4"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading"  >
+            <h2>اختر القطعة التي تليق بك</h2>
+            <p>مجموعة فريدة من المجوهرات الراقية تناسب كل الأذواق والمناسبات.</p>
+        </div>
+         
+        <div class="filter-lg-screen">
+          <div class="filter">    
+            <div class="select-con">  
+                    <nz-select nzShowSearch nzAllowClear nzPlaceHolder="الفئة" >
+                        <nz-option nzLabel="خواتم" nzValue="خواتم">خواتم</nz-option>
+                        <nz-option nzLabel="سلاسل" nzValue="سلاسل">سلاسل</nz-option>
+                        <nz-option nzLabel="حلقان" nzValue="حلقان">حلقان</nz-option>
+                        <nz-option nzLabel="أساور" nzValue="أساور">أساور</nz-option>
+                    </nz-select>
+                    <nz-select nzShowSearch nzAllowClear nzPlaceHolder="العيار" >
+                        <nz-option nzLabel="عيار 24" nzValue="عيار 24">عيار 24</nz-option>
+                        <nz-option nzLabel="عيار 22" nzValue="عيار 22">عيار 22</nz-option>
+                        <nz-option nzLabel="عيار 21" nzValue="عيار 21">عيار 21</nz-option>
+                        <nz-option nzLabel="عيار 18" nzValue="عيار 18">عيار 18</nz-option>
+                        <nz-option nzLabel="عيار 14" nzValue="عيار 14">عيار 14</nz-option>
+                    </nz-select>
+              </div>
+  
+              <button>تصفية</button>
+          </div>
+        </div>
+          
+        <div class="filter-sm-screen">
+            <div class="filter-sm" [class.active]="filterActive" (click)="openFilter()">
+                  <div class="icon">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M10.5 19c1.98 0 3.81-.69 5.25-1.83L20 21.42l1.41-1.41-4.25-4.25a8.47 8.47 0 0 0 1.83-5.25c0-4.69-3.81-8.5-8.5-8.5S2 5.81 2 10.5 5.81 19 10.5 19m0-15c3.58 0 6.5 2.92 6.5 6.5S14.08 17 10.5 17 4 14.08 4 10.5 6.92 4 10.5 4"></path>
+                      </svg>
+                  </div>
+                  <div class="icon arrow">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z"></path>
+                        </svg>
+                  </div>
+            </div>
+            <div class="filter-body" [class.active]="filterActive">
+                <div class="filter">    
+                  <div class="select-con">  
+                        <nz-select nzShowSearch nzAllowClear nzPlaceHolder="الفئة" >
+                            <nz-option nzLabel="خواتم" nzValue="خواتم">خواتم</nz-option>
+                            <nz-option nzLabel="سلاسل" nzValue="سلاسل">سلاسل</nz-option>
+                            <nz-option nzLabel="حلقان" nzValue="حلقان">حلقان</nz-option>
+                            <nz-option nzLabel="أساور" nzValue="أساور">أساور</nz-option>
+                        </nz-select>
+                        <nz-select nzShowSearch nzAllowClear nzPlaceHolder="العيار" >
+                            <nz-option nzLabel="عيار 24" nzValue="عيار 24">عيار 24</nz-option>
+                            <nz-option nzLabel="عيار 22" nzValue="عيار 22">عيار 22</nz-option>
+                            <nz-option nzLabel="عيار 21" nzValue="عيار 21">عيار 21</nz-option>
+                            <nz-option nzLabel="عيار 18" nzValue="عيار 18">عيار 18</nz-option>
+                            <nz-option nzLabel="عيار 14" nzValue="عيار 14">عيار 14</nz-option>
+                        </nz-select>
+                    </div>
+
+
+                    <button>تصفية</button>
+                </div>
+            </div>
+         </div>
+
+
+        <div class="products row">
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img24.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img3.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوي</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img6.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img13.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img10.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img20.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img21.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="product col-6 col-md-4 col-lg-3">
+              <div class="item ">
+                <div class="content">
+                  <div class="img-con">
+                    <img src="img25.png" alt="">
+                  </div>
+                  <div class="data">
+                    <div class="category-con">
+                      <p class="category">خاتم </p>
+                      <span></span>
+                    </div>
+                    <p class="name">خاتم بحجر بيضاوى</p>
+                    <div class="con">
+                      <p class="weight"><span>الوزن</span> : 3 ج</p>
+                      <span class="line"></span>
+                      <p class="quality"><span>عيار</span> : 20</p>
+                    </div>
+                  </div>
+                  <div class="icons-con">
+                    <div class="icon heart">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <path d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z"></path>
+                        </svg>
+                    </div>
+                    <div class="icon phone">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                      fill="currentColor" viewBox="0 0 24 24" >
+                      <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div> 
+
+
+        <div class="pagination">
+          <div class="next">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                fill="currentColor" viewBox="0 0 24 24" >
+                <path d="m7.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"></path><path d="m11.29 7.71 4.3 4.29-4.3 4.29 1.42 1.42 5.7-5.71-5.7-5.71z"></path>
+                </svg>
+          </div>
+           <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+           </ul>
+           <div class="prev">
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                  fill="currentColor" viewBox="0 0 24 24" >
+                  <path d="M12.71 16.29 8.41 12l4.3-4.29-1.42-1.42L5.59 12l5.7 5.71z"></path><path d="M16.29 6.29 10.59 12l5.7 5.71 1.42-1.42-4.3-4.29 4.3-4.29z"></path>
+                  </svg>
+           </div>
+        </div>
+    </div>
+</div>
