@@ -19,7 +19,8 @@
     --larg-size: clamp(24px,4vw,28px);
     --small-heading:clamp(21px,4vw,25px) ;
     --main-background: #f5f5f5;
-    --background-img-color:#e7e7e7;
+    /* --background-img-color:#e7e7e7; */
+    --background-img-color:white;
 }
 .dark{
     --white-color:#333;

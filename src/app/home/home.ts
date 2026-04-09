@@ -136,7 +136,7 @@ startAutoSlide() {
   this.autoSlideInterval = setInterval(() => {
     this.slidePrev();
     this.slidePrev2();
-  }, 2000);
+  }, 3000);
 }
 
 stopAutoSlide() {
@@ -152,7 +152,7 @@ pauseAndRestartAutoSlide() {
 
   this.restartTimeout = setTimeout(() => {
     this.startAutoSlide();
-  }, 4000);
+  }, 6000);
 }
 
 slideNext() {

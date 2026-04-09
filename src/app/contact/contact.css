@@ -67,7 +67,7 @@
     margin-bottom: 1rem;
 }
 .face-img .img-con {
-    height: 300px;
+    height: 600px;
     width: 100%;
     padding: 0 1rem;
     position: relative;
@@ -458,6 +458,9 @@ textarea {
 
 }
 @media (max-width:767px) {
+    .face-img .img-con{
+        height: 300px;
+    }
     .face-img .img-con{
         padding: 0.3rem;
     }

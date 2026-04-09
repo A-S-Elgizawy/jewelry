@@ -23,7 +23,6 @@
    display: flex;
    justify-content: center;
    align-items: center;
-
 }
 
 .hero-image {
@@ -263,7 +262,7 @@
   aspect-ratio: 1 / 1;
   object-fit: contain;
 }
-.swiper-slide p{
+.swiper1 .swiper-slide p{
     text-align: center;
     font-weight: 600;
     font-size: var(--medium-size-14);
@@ -366,7 +365,7 @@
   text-align: center;
   font-size: clamp(14.5px,2vw,16.5px);
   font-weight: 700;
-  padding: 5px 0 12px;
+  padding: 5px 0 13px;
   color: var(--black-color);
 }
  .item .content .data .con{
@@ -529,7 +528,7 @@
     }
 }
 @media (max-width:767px){
-  .swiper1 .swiper-slide {
+.swiper1 .swiper-slide {
   padding: .5rem;
 }
 .swiper1 .swiper-slide p{
